@@ -5,11 +5,7 @@ const chalk = require('chalk');
 // console.log(chalk.blue('Hello world!'));
 var userName=readlineSync.question("Please, enter your name :");
 console.log(chalk.bgRed(` Hi ${userName}, welcome to the quiz`))
-if(!readlineSync.keyInYN('Do you know Prashant?'))
-{
-  console.log("okay ! you may exit!");
-  process.exit();
-}
+
 
 
   
