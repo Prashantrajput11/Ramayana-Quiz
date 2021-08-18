@@ -4,7 +4,7 @@ const chalk = require('chalk');
  
 // console.log(chalk.blue('Hello world!'));
 var userName=readlineSync.question("Please, enter your name :");
-console.log(chalk.bgRed(` Hi ${userName}, welcome to the quiz`))
+console.log(chalk.bgRed(` Hi ${userName}, welcome to the quiz on Ramayana`))
 
 
 
@@ -13,14 +13,14 @@ console.log(chalk.bgRed(` Hi ${userName}, welcome to the quiz`))
 
 console.log(chalk.bgYellow(`Instructions for the quiz:`));
 console.log(chalk`
-    There are {bgRed 5} Questions in Level 1.
+  There are {bgRed 5} Questions in Level 1.
     
 `);
-console.log(`The scoring is calculated as:`);
+console.log(chalk.bgRedBright(`The scoring is calculated as:`));
 
-console.log(`a:for every correct answer, you will get +2 points.
+console.log(`a:${chalk.bgGreenBright(`for every correct answer, you will get 2 points`)}
 
-b: for every incorrect choice, you score will be deducted by 1 
+b: ${chalk.bgRedBright(`for every incorrect choice, you score will be deducted by 1 `)} 
 
 Your high score will be displayed at the end of the quiz`)
 
@@ -29,11 +29,11 @@ var score=0;
 var highscore=[
   {
   name:"abhishek",
-  score:11
+  score:4
 },
 {
   name:"chetan",
-  score:6
+  score:5
 }
 
 
@@ -61,38 +61,38 @@ else
 var questions=[
   {
   
-  question:`Question 1:   who was brother of Stefan?
-  a: Damon Salvatore,
-  b: Matt`,
+  question:`Question 1:   who killed Ravana  ?
+  a: Lord Ram,
+  b: Lord Lakshman  `,
 answer:"a"
   
 },
   {
-     question:` Question 2: who was original vampire?
-      a: Damon Salvatore,
-      b: Elijah`,
+     question:` Question 2: Who was the brother of sugriv?
+      a: Lord Hanuman,
+      b: Bali  `,
 answer:"b" 
   },
 
   {
-     question:` Question 3: who was the doppelganger(lookalike) of Katherine Peirce?
-      a: Caroline Forbes
-      b: Elena Gilbert`,
-answer:"b" 
+     question:` Question 3 :Lakshmana is considered to be the incarnation of whom??
+      a: Sheshnag
+      b: Lord Brahma  `,
+answer:"a" 
   },
 
   {
-     question:`Question 4:Who turned the Salvatore brothers into vampires ?
-      a: Klaus
-      b: Elijah
-      c:Katherine Pierce`,
-answer:"c" 
+     question:`Question 4:Ravana was a devotee of the god.?
+      a: Lord Shiva
+      b: Lord Vishnu
+      c:Lord Hanuman  `,
+answer:"a" 
   },
   {
-     question:`Question 5: who was Tyler Lockwood?
-      a: a vampire
-      b: a witch
-      c: a werewolf`,
+     question:`Question 5:What was the name of Lord Rama's father?
+      a: Rajadhiraj
+      b: Nahapana
+      c: Dasaratha  `,
 answer:"c" 
   },
   
@@ -108,7 +108,7 @@ for(var i=0;i<questions.length;i++)
 
 // has the current user beaten the highscores
 
-console.log(` your score is ${score}`);
+console.log(` your total score is ${score}`);
 highscore.forEach(function(curr,i){
   if(score>curr.score)
     {
